@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<seiscomp xmlns="http://geofon.gfz-potsdam.de/ns/seiscomp3-schema/0.11" version="0.11">
+  <Inventory>
+    <sensor publicID="Sensor#Sine-Wave" name="S-Sine-Wave" response="ResponsePAZ#Sine-Wave">
+      <description>Function Generator</description>
+      <manufacturer>Digilent</manufacturer>
+      <model>Sine Wave</model>
+      <type>Voltage</type>
+      <unit>V</unit>
+      <lowFrequency>1.000000</lowFrequency>
+      <highFrequency>100.000000</highFrequency>
+      <remark>{"unit":"V","model":"Sine Wave","gainUnit":"V"}</remark>
+    </sensor>
+    <datalogger publicID="Datalogger#NSI-AD24_NEO-1" name="DL-NSI-AD24">
+      <description>NSI-AD24 NEO-1 24-bit digitizer</description>
+      <digitizerModel>NSI-AD24 NEO-1</digitizerModel>
+      <digitizerManufacturer>National Seismic Instruments</digitizerManufacturer>
+      <gain>1</gain>
+      <maxClockDrift>0</maxClockDrift>
+      <decimation sampleRateNumerator="100" sampleRateDenominator="1">
+      </decimation>
+    </datalogger>
+    <responsePAZ publicID="ResponsePAZ#Sine-Wave" name="RP-Sine-Wave">
+      <type>A</type>
+      <gain>419430.400000</gain>
+      <gainFrequency>1.000000</gainFrequency>
+      <normalizationFactor>1.000000</normalizationFactor>
+      <normalizationFrequency>1.000000</normalizationFrequency>
+      <numberOfZeros>0</numberOfZeros>
+      <numberOfPoles>0</numberOfPoles>
+      <zeros></zeros>
+      <poles></poles>
+    </responsePAZ>
+    <network publicID="Network#UB" code="UB">
+      <start>2025-10-30T00:00:00.0000Z</start>
+      <description>NSI-Geo NET</description>
+      <institutions>Brawijaya University</institutions>
+      <region>Indonesia</region>
+      <type>OT</type>
+      <netClass>p</netClass>
+      <archive>GFZ</archive>
+      <restricted>false</restricted>
+      <shared>true</shared>
+      <remark>Data available via SeedLink</remark>
+      <station publicID="Station#UB.STNM0" code="STNM0">
+        <start>2025-10-30T00:00:00.0000Z</start>
+        <description>NSI Seismic Network</description>
+        <latitude>-7.35072</latitude>
+        <longitude>110.51831</longitude>
+        <elevation>661.53</elevation>
+        <place>Jawa Timur</place>
+        <country>Indonesia</country>
+        <affiliation>Unknown</affiliation>
+        <restricted>false</restricted>
+        <shared>true</shared>
+        <remark>Station STNM0 - NSI Seismic Network</remark>
+        <sensorLocation publicID="SensorLocation#UB.STNM0.00" code="00">
+          <start>2025-10-30T00:00:00.0000Z</start>
+          <latitude>-7.35072</latitude>
+          <longitude>110.51831</longitude>
+          <elevation>661.53</elevation>
+          <stream publicID="Stream/UB-STNM0-00-EHZ" code="EHZ" datalogger="Datalogger#NSI-AD24_NEO-1" sensor="Sensor#Sine-Wave">
+            <start>2025-10-30T00:00:00.0000Z</start>
+            <dataloggerChannel>3</dataloggerChannel>
+            <sensorChannel>3</sensorChannel>
+            <sampleRateNumerator>100</sampleRateNumerator>
+            <sampleRateDenominator>1</sampleRateDenominator>
+            <depth>0</depth>
+            <azimuth>0</azimuth>
+            <dip>-90</dip>
+            <gain>419430.400000</gain>
+            <gainFrequency>1.000000</gainFrequency>
+            <gainUnit>V</gainUnit>
+            <format>Steim2</format>
+            <flags>CG</flags>
+            <restricted>false</restricted>
+            <shared>true</shared>
+          </stream>
+        </sensorLocation>
+      </station>
+    </network>
+  </Inventory>
+</seiscomp>
